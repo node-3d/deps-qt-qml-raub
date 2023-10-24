@@ -2,15 +2,13 @@
 
 This is a part of [Node3D](https://github.com/node-3d) project.
 
-[![NPM](https://nodei.co/npm/deps-qt-qml-raub.png?compact=true)](https://www.npmjs.com/package/deps-qt-qml-raub)
+[![NPM](https://badge.fury.io/js/deps-qt-qml-raub.svg)](https://badge.fury.io/js/deps-qt-qml-raub)
+[![ESLint](https://github.com/node-3d/deps-qt-qml-raub/actions/workflows/eslint.yml/badge.svg)](https://github.com/node-3d/deps-qt-qml-raub/actions/workflows/eslint.yml)
+[![Test](https://github.com/node-3d/deps-qt-qml-raub/actions/workflows/test.yml/badge.svg)](https://github.com/node-3d/deps-qt-qml-raub/actions/workflows/test.yml)
 
-[![Build Status](https://api.travis-ci.com/node-3d/deps-qt-qml-raub.svg?branch=master)](https://travis-ci.com/node-3d/deps-qt-qml-raub)
-[![CodeFactor](https://www.codefactor.io/repository/github/node-3d/deps-qt-qml-raub/badge)](https://www.codefactor.io/repository/github/node-3d/deps-qt-qml-raub)
-
-> npm i deps-qt-qml-raub
-
-
-## Synopsis
+```console
+npm i -s deps-qt-qml-raub
+```
 
 This dependency package is distributing **Qt Core 5.13.0**
 binaries through **NPM** for **Node.js** addons.
