@@ -8,5 +8,5 @@ const gui = require('deps-qt-gui-raub');
 module.exports = {
 	gui,
 	core : gui.core,
-	...tools.paths(__dirname),
+	...require('addon-tools-raub').getPaths(__dirname),
 };
