@@ -1,7 +1,5 @@
 'use strict';
 
-const tools = require('addon-tools-raub');
-
 const gui = require('deps-qt-gui-raub');
 
 
