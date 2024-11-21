@@ -3,6 +3,7 @@
 
 # QML
 cp $2/bin/Qt6Qml.dll $1/Qt6Qml.dll
+cp $2/bin/Qt6QmlMeta.dll $1/Qt6QmlMeta.dll
 cp $2/bin/Qt6Quick.dll $1/Qt6Quick.dll
 cp $2/bin/Qt6QuickControls2.dll $1/Qt6QuickControls2.dll
 cp $2/bin/Qt6QuickTemplates2.dll $1/Qt6QuickTemplates2.dll

@@ -2,7 +2,8 @@
 # $2 is Qt platform path - /home/opc/6.8.0/gcc_arm64
 
 # QML
-cp $2/lib/libQt6Qml.so.6 $1/libQt6Qml.so.6
+cp $2/lib/libQt6QmlMeta.so.6 $1/libQt6QmlMeta.so.6
+cp $2/lib/libQt6QmlMeta.so.6 $1/libQt6QmlMeta.so.6
 cp $2/lib/libQt6Quick.so.6 $1/libQt6Quick.so.6
 cp $2/lib/libQt6QuickControls2.so.6 $1/libQt6QuickControls2.so.6
 cp $2/lib/libQt6QuickTemplates2.so.6 $1/libQt6QuickTemplates2.so.6

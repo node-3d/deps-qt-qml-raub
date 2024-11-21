@@ -5,7 +5,12 @@
 mkdir -p $1/QtQml.framework
 mkdir -p $1/QtQml.framework/Versions
 mkdir -p $1/QtQml.framework/Versions/Current
-cp $2/lib/QtQml.framework/Versions/Current/QtQml $1/QtQml.framework/Versions/Current/QtGui
+cp $2/lib/QtQml.framework/Versions/Current/QtQml $1/QtQml.framework/Versions/Current/QtQml
+
+mkdir -p $1/QtQmlMeta.framework
+mkdir -p $1/QtQmlMeta.framework/Versions
+mkdir -p $1/QtQmlMeta.framework/Versions/Current
+cp $2/lib/QtQmlMeta.framework/Versions/Current/QtQmlMeta $1/QtQmlMeta.framework/Versions/Current/QtQmlMeta
 
 mkdir -p $1/QtQuick.framework
 mkdir -p $1/QtQuick.framework/Versions
