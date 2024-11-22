@@ -35,7 +35,7 @@ jobs:
       - image: cibuilds/github:0.10
     steps:
       - attach_workspace:
-        at: /tmp/artifacts
+          at: /tmp/artifacts
       - run: |
           PKG_VERSION=`cat /tmp/artifacts/pkg-version`
           ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} /tmp/artifacts/aarch64.gz
