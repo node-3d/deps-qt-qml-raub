@@ -1,5 +1,5 @@
 # $1 is tmp path - ${{ github.workspace }}/../__tmp
-# $2 is Qt platform path - /home/opc/6.8.0/gcc_arm64
+# $2 is Qt platform path - e.g.: ~/Qt/6.8.0/msvc2022_64
 
 # QML
 cp $2/bin/Qt6Qml.dll $1/Qt6Qml.dll

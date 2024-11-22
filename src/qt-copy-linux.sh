@@ -1,28 +1,28 @@
 # $1 is tmp path - ${{ github.workspace }}/../__tmp
-# $2 is Qt platform path - /home/opc/6.8.0/gcc_arm64
+# $2 is Qt platform path - e.g.: ~/Qt/6.8.0/gcc_arm64
 
 # QML
-cp $2/lib/libQt6QmlMeta.so.6 $1/libQt6QmlMeta.so.6
+cp $2/lib/libQt6Qml.so.6 $1/libQt6Qml.so.6
 cp $2/lib/libQt6QmlMeta.so.6 $1/libQt6QmlMeta.so.6
 cp $2/lib/libQt6Quick.so.6 $1/libQt6Quick.so.6
 cp $2/lib/libQt6QuickControls2.so.6 $1/libQt6QuickControls2.so.6
 cp $2/lib/libQt6QuickTemplates2.so.6 $1/libQt6QuickTemplates2.so.6
 cp $2/lib/libQt6QuickWidgets.so.6 $1/libQt6QuickWidgets.so.6
 
-cp $2/lib/libQt6QuickVectorImage.so.6 $1/qml/libQt6QuickVectorImage.so.6
-cp $2/lib/libQt6QmlCompiler.so.6 $1/qml/libQt6QmlCompiler.so.6
-cp $2/lib/libQt6QmlCore.so.6 $1/qml/libQt6QmlCore.so.6
-cp $2/lib/libQt6QuickControls2Basic.so.6 $1/qml/libQt6QuickControls2Basic.so.6
-cp $2/lib/libQt6QuickControls2Impl.so.6 $1/qml/libQt6QuickControls2Impl.so.6
-cp $2/lib/libQt6QuickDialogs2.so.6 $1/qml/libQt6QuickDialogs2.so.6
-cp $2/lib/libQt6QuickDialogs2QuickImpl.so.6 $1/qml/libQt6QuickDialogs2QuickImpl.so.6
-cp $2/lib/libQt6QuickDialogs2Utils.so.6 $1/qml/libQt6QuickDialogs2Utils.so.6
-cp $2/lib/libQt6QuickEffects.so.6 $1/qml/libQt6QuickEffects.so.6
-cp $2/lib/libQt6QuickLayouts.so.6 $1/qml/libQt6QuickLayouts.so.6
-cp $2/lib/libQt6QuickParticles.so.6 $1/qml/libQt6QuickParticles.so.6
-cp $2/lib/libQt6QuickShapes.so.6 $1/qml/libQt6QuickShapes.so.6
-cp $2/lib/libQt6QmlWorkerScript.so.6 $1/qml/libQt6QmlWorkerScript.so.6
-cp $2/lib/libQt6QmlModels.so.6 $1/qml/libQt6QmlModels.so.6
+cp $2/lib/libQt6QuickVectorImage.so.6 $1/libQt6QuickVectorImage.so.6
+cp $2/lib/libQt6QmlCompiler.so.6 $1/libQt6QmlCompiler.so.6
+cp $2/lib/libQt6QmlCore.so.6 $1/libQt6QmlCore.so.6
+cp $2/lib/libQt6QuickControls2Basic.so.6 $1/libQt6QuickControls2Basic.so.6
+cp $2/lib/libQt6QuickControls2Impl.so.6 $1/libQt6QuickControls2Impl.so.6
+cp $2/lib/libQt6QuickDialogs2.so.6 $1/libQt6QuickDialogs2.so.6
+cp $2/lib/libQt6QuickDialogs2QuickImpl.so.6 $1/libQt6QuickDialogs2QuickImpl.so.6
+cp $2/lib/libQt6QuickDialogs2Utils.so.6 $1/libQt6QuickDialogs2Utils.so.6
+cp $2/lib/libQt6QuickEffects.so.6 $1/libQt6QuickEffects.so.6
+cp $2/lib/libQt6QuickLayouts.so.6 $1/libQt6QuickLayouts.so.6
+cp $2/lib/libQt6QuickParticles.so.6 $1/libQt6QuickParticles.so.6
+cp $2/lib/libQt6QuickShapes.so.6 $1/libQt6QuickShapes.so.6
+cp $2/lib/libQt6QmlWorkerScript.so.6 $1/libQt6QmlWorkerScript.so.6
+cp $2/lib/libQt6QmlModels.so.6 $1/libQt6QmlModels.so.6
 
 cp $2/plugins/qmltooling/libqmldbg_debugger.so $1/plugins/qmltooling/libqmldbg_debugger.so
 cp $2/plugins/qmltooling/libqmldbg_inspector.so $1/plugins/qmltooling/libqmldbg_inspector.so

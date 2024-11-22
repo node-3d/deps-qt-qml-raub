@@ -21,7 +21,7 @@ jobs:
       - run: cd ~ && python -m aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
       - checkout
       - run: mkdir -p ~/artifacts
-      - run: node -p "'version='+require('./package').version" > ~/artifacts/pkg-version
+      - run: node -p "require('./package').version" > ~/artifacts/pkg-version
       - run: chmod +x src/qt-mkdir.sh && src/qt-mkdir.sh ~/qt_tmp
       - run: chmod +x src/qt-copy-linux.sh && src/qt-copy-linux.sh ~/qt_tmp ~/Qt/6.8.0/gcc_arm64
       - run: cd ~/qt_tmp && tar -czf ../aarch64.gz *

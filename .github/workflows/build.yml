@@ -92,13 +92,6 @@ jobs:
           chmod +x src/qt-copy-linux.sh
           src/qt-copy-linux.sh ${{ env.QT_TMP }} ${{ github.workspace }}/../Qt/6.8.0/gcc_64
 
-      - name: Copy Qt Dir - Linux ARM
-        if: matrix.os != 'ubuntu-22.04' && matrix.os != 'macos-14' && matrix.os != 'windows-2022'
-        run: |
-          echo "OS_NAME=aarch64" >> $GITHUB_ENV
-          chmod +x src/qt-copy-linux.sh
-          src/qt-copy-linux.sh ${{ env.QT_TMP }} /home/opc/6.8.0/gcc_arm64
-
       - name: Copy Qt Dir - MacOS ARM
         if: matrix.os == 'macos-14'
         run: |
