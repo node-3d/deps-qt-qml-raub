@@ -20,24 +20,23 @@ jobs:
           install-yarn: false
       - node/install-packages:
           pkg-manager: npm
-      - run: |
-        python -m pip install --upgrade pip setuptools
-        python -m pip install aqtinstall
+      - run: python -m pip install --upgrade pip setuptools
+      - run: python -m pip install aqtinstall
       #   python -m pip install pyqt5-sip
       #   python -m pip install pyqt5 --config-settings --confirm-license= --verbose
       #   python -m pip install "anki == 24.06.3"
       #   python -m pip install "aqt == 24.6.3"
       #   python -m pip install "aqt == 24.6.3"
-        aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
-        echo LSLSLSLSLLSLSLSLSLSLLS
-        ls ~
-        echo LSLSLSLSLLSLSLSLSLSLLS 222222222222222222
-        ls ~/Qt
-        RELEASE_VERSION=`node -p "'version='+require('./package').version"`
-        echo $RELEASE_VERSION
-        chmod +x src/qt-mkdir.sh
-        src/qt-mkdir.sh ~/qt_tmp
-        chmod +x src/qt-copy-linux.sh
-        src/qt-copy-linux.sh ~/qt_tmp ~/Qt/gcc_arm64
-        cd ~/qt_tmp
-        tar -czf ../aarch64.gz *
+      - run: aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
+      - run: echo LSLSLSLSLLSLSLSLSLSLLS
+      - run: ls ~
+      - run: echo LSLSLSLSLLSLSLSLSLSLLS 222222222222222222
+      - run: ls ~/Qt
+      - run: RELEASE_VERSION=`node -p "'version='+require('./package').version"`
+      - run: echo $RELEASE_VERSION
+      - run: chmod +x src/qt-mkdir.sh
+      - run: src/qt-mkdir.sh ~/qt_tmp
+      - run: chmod +x src/qt-copy-linux.sh
+      - run: src/qt-copy-linux.sh ~/qt_tmp ~/Qt/gcc_arm64
+      - run: cd ~/qt_tmp
+      - run: tar -czf ../aarch64.gz *
