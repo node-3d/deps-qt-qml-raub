@@ -1,0 +1,43 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@6
+  python: circleci/python@2
+
+workflows:
+  pack-qt-libs:
+    jobs:
+      - build
+
+jobs:
+  build:
+    executor: linux
+    resource_class: arm.medium
+    steps:
+      - checkout
+      - node/install:
+          node-version: 22.9.0
+          install-yarn: false
+      - node/install-packages:
+          pkg-manager: npm
+      - run: |
+        python -m pip install --upgrade pip setuptools
+        python -m pip install aqtinstall
+      #   python -m pip install pyqt5-sip
+      #   python -m pip install pyqt5 --config-settings --confirm-license= --verbose
+      #   python -m pip install "anki == 24.06.3"
+      #   python -m pip install "aqt == 24.6.3"
+      #   python -m pip install "aqt == 24.6.3"
+        aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
+        echo LSLSLSLSLLSLSLSLSLSLLS
+        ls ~
+        echo LSLSLSLSLLSLSLSLSLSLLS 222222222222222222
+        ls ~/Qt
+        RELEASE_VERSION=`node -p "'version='+require('./package').version"`
+        echo $RELEASE_VERSION
+        chmod +x src/qt-mkdir.sh
+        src/qt-mkdir.sh ~/qt_tmp
+        chmod +x src/qt-copy-linux.sh
+        src/qt-copy-linux.sh ~/qt_tmp ~/Qt/gcc_arm64
+        cd ~/qt_tmp
+        tar -czf ../aarch64.gz *
