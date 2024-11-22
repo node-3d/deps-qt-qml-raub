@@ -5,6 +5,8 @@ workflows:
     jobs:
       - pack-qt
       - upload-qt:
+          context:
+            - github
           requires:
             - pack-qt
 
@@ -41,5 +43,5 @@ jobs:
           PKG_VERSION=`cat /tmp/artifacts/pkg-version`
           echo PKG_VERSION ${PKG_VERSION} $PKG_VERSION
           echo PKG_VERSION2 $PKG_VERSION
-          ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} /tmp/artifacts/aarch64.gz
+          ghr -t "${GITHUB_TOKEN}" -u "${CIRCLE_PROJECT_USERNAME}" -r "${CIRCLE_PROJECT_REPONAME}" -c "${CIRCLE_SHA1}" -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} /tmp/artifacts/aarch64.gz
       
