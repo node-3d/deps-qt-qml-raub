@@ -39,8 +39,5 @@ jobs:
       - attach_workspace:
           at: /tmp/artifacts
       - run: |
-          ls /tmp/artifacts
           PKG_VERSION=`cat /tmp/artifacts/pkg-version`
-          echo PKG_VERSION ${PKG_VERSION} $PKG_VERSION
-          echo PKG_VERSION2 $PKG_VERSION
           ghr -u "node-3d" -r "${CIRCLE_PROJECT_REPONAME}" -c "${CIRCLE_SHA1}" -replace ${PKG_VERSION} /tmp/artifacts/aarch64.gz
