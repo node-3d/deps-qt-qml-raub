@@ -14,13 +14,12 @@ jobs:
       - run: python -m pip install setuptools aqtinstall
       - run: python -m aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
       - run: ls ~/Qt/6.8.0
-      - run: ls ~/project
-      - run: chmod +x src/qt-mkdir.sh && src/qt-mkdir.sh ~/qt_tmp
-      - run: chmod +x src/qt-copy-linux.sh && src/qt-copy-linux.sh ~/qt_tmp ~/Qt/6.8.0/gcc_arm64
-      - run: cd ~/qt_tmp && tar -czf ../aarch64.gz *
       - checkout
       - run: ls
       - run: ls ~
-      - run: ls ~/project
+      - run: chmod +x src/qt-mkdir.sh && src/qt-mkdir.sh ~/qt_tmp
+      - run: chmod +x src/qt-copy-linux.sh && src/qt-copy-linux.sh ~/qt_tmp ~/Qt/6.8.0/gcc_arm64
+      - run: cd ~/qt_tmp && tar -czf ../aarch64.gz *
+      - run: ls ~
       # - run: RELEASE_VERSION=`node -p "'version='+require('./package').version"`
       # - run: echo $RELEASE_VERSION
