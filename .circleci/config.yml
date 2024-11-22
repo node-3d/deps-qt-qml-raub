@@ -4,7 +4,9 @@ workflows:
   pack-qt:
     jobs:
       - pack-qt
-      - upload-qt
+      - upload-qt:
+          requires:
+            - pack-qt
 
 jobs:
 
@@ -29,8 +31,6 @@ jobs:
             - pkg-version
 
   upload-qt:
-    requires:
-      - pack-qt
     docker:
       - image: cibuilds/github:0.10
     steps:
