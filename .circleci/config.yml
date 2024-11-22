@@ -4,8 +4,10 @@ workflows:
   pack-qt:
     jobs:
       - pack-qt
+      - upload-qt
 
 jobs:
+
   pack-qt:
     machine:
       image: ubuntu-2204:current
@@ -14,9 +16,25 @@ jobs:
       - run: python -m pip install setuptools aqtinstall
       - run: cd ~ && python -m aqt install-qt --outputdir ~/Qt linux_arm64 desktop 6.8.0 linux_gcc_arm64
       - checkout
-      - run: PKG_VERSION=`node -p "'version='+require('./package').version"`
-      - run: echo $PKG_VERSION
+      - run: mkdir -p ~/artifacts
+      - run: node -p "'version='+require('./package').version" > ~/artifacts/pkg-version
       - run: chmod +x src/qt-mkdir.sh && src/qt-mkdir.sh ~/qt_tmp
       - run: chmod +x src/qt-copy-linux.sh && src/qt-copy-linux.sh ~/qt_tmp ~/Qt/6.8.0/gcc_arm64
       - run: cd ~/qt_tmp && tar -czf ../aarch64.gz *
-      - run: ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} ~/aarch64.gz
+      - run: mkdir -p ~/artifacts && mv ~/aarch64.gz ~/artifacts
+      - persist_to_workspace:
+          root: ~/artifacts
+          paths:
+            - aarch64.gz
+            - pkg-version
+
+  upload-qt:
+    docker:
+      - image: cibuilds/github:0.10
+    steps:
+      - attach_workspace:
+        at: /tmp/artifacts
+      - run: |
+        PKG_VERSION=`cat /tmp/artifacts/pkg-version`
+        ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} /tmp/artifacts/aarch64.gz
+      
