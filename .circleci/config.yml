@@ -43,5 +43,5 @@ jobs:
           PKG_VERSION=`cat /tmp/artifacts/pkg-version`
           echo PKG_VERSION ${PKG_VERSION} $PKG_VERSION
           echo PKG_VERSION2 $PKG_VERSION
-          ghr -replace ${PKG_VERSION} /tmp/artifacts/aarch64.gz
+          ghr -u "${CIRCLE_PROJECT_USERNAME}" -replace ${PKG_VERSION} /tmp/artifacts/aarch64.gz
       
