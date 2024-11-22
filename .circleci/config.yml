@@ -19,4 +19,4 @@ jobs:
       - run: chmod +x src/qt-mkdir.sh && src/qt-mkdir.sh ~/qt_tmp
       - run: chmod +x src/qt-copy-linux.sh && src/qt-copy-linux.sh ~/qt_tmp ~/Qt/6.8.0/gcc_arm64
       - run: cd ~/qt_tmp && tar -czf ../aarch64.gz *
-      - run: ls ~
+      - run: ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Release ${PKG_VERSION}" -replace -draft ${PKG_VERSION} ~/aarch64.gz
