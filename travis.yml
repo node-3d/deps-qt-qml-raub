@@ -1,0 +1,64 @@
+language: node_js
+
+if: type = api
+
+node_js:
+  - "22.9.0"
+
+jobs:
+  include:
+
+  - name: "Linux"
+    os: linux
+    dist: jammy
+    sudo: true
+    arch: arm64
+    env:
+    - OS_NAME=aarch64
+    - SCRIPT_NAME=linux
+    - QT_ARCH=linux_arm64
+    - QT_COMPILER=linux_gcc_arm64
+
+  - name: "MacOS"
+    os: osx
+    arch: amd64
+    env:
+    - OS_NAME=osx
+    - SCRIPT_NAME=macos
+    - QT_ARCH=mac
+    - QT_COMPILER=clang_64
+
+before_install:
+  - python -m pip install --upgrade pip setuptools
+  - python -m pip install aqtinstall
+  # - python -m pip install pyqt5-sip
+  # - python -m pip install pyqt5 --config-settings --confirm-license= --verbose
+  # - python -m pip install "anki == 24.06.3"
+  # - python -m pip install "aqt == 24.6.3"
+  # - python -m pip install "aqt == 24.6.3"
+  - aqt install-qt --outputdir ~/Qt ${QT_ARCH} desktop 6.8.0 ${QT_COMPILER}
+  - echo LSLSLSLSLLSLSLSLSLSLLS
+  - ls ~
+  - echo LSLSLSLSLLSLSLSLSLSLLS 222222222222222222
+  - ls ~/Qt
+
+install:
+  - RELEASE_VERSION=`node -p "'version='+require('./package').version"`
+  - echo $RELEASE_VERSION
+
+script:
+  - chmod +x src/qt-copy-${SCRIPT_NAME}.sh
+  - src/qt-copy-${SCRIPT_NAME}.sh ${{ env.QT_TMP }} /home/opc/6.8.0/gcc_arm64
+  - cd '${{ env.QT_TMP }}'
+  - tar -czf ../${{ env.OS_NAME }}.gz *
+
+deploy:
+  provider: releases
+  overwrite: true
+  draft: true
+  name: Release ${RELEASE_VERSION}-t
+  tag_name: ${RELEASE_VERSION}-t
+  target_commitish: $TRAVIS_COMMIT
+  token: $GITHUB_TOKEN
+  file: ${OS_NAME}.gz
+  edge: true
