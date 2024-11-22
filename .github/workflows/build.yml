@@ -41,7 +41,6 @@ jobs:
           draft: true
           tag_name: ${{ steps.package-version.outputs.version }}
           name: Release ${{ steps.package-version.outputs.version }}
-          body: Binaries at ${{ github.sha }}
 
   build:
     name: Fetch Qt Binaries
