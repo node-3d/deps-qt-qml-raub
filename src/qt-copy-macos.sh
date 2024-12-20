@@ -52,6 +52,11 @@ mkdir -p $1/QtQuickControls2Basic.framework/Versions
 mkdir -p $1/QtQuickControls2Basic.framework/Versions/Current
 cp $2/lib/QtQuickControls2Basic.framework/Versions/Current/QtQuickControls2Basic $1/QtQuickControls2Basic.framework/Versions/Current/QtQuickControls2Basic
 
+mkdir -p $1/Qt6QuickControls2BasicStyleImpl.framework
+mkdir -p $1/Qt6QuickControls2BasicStyleImpl.framework/Versions
+mkdir -p $1/Qt6QuickControls2BasicStyleImpl.framework/Versions/Current
+cp $2/lib/Qt6QuickControls2BasicStyleImpl.framework/Versions/Current/Qt6QuickControls2BasicStyleImpl $1/Qt6QuickControls2BasicStyleImpl.framework/Versions/Current/Qt6QuickControls2BasicStyleImpl
+
 mkdir -p $1/QtQuickControls2Impl.framework
 mkdir -p $1/QtQuickControls2Impl.framework/Versions
 mkdir -p $1/QtQuickControls2Impl.framework/Versions/Current

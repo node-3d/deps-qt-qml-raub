@@ -13,6 +13,7 @@ cp $2/bin/Qt6QuickVectorImage.dll $1/Qt6QuickVectorImage.dll
 cp $2/bin/Qt6QmlCompiler.dll $1/Qt6QmlCompiler.dll
 cp $2/bin/Qt6QmlCore.dll $1/Qt6QmlCore.dll
 cp $2/bin/Qt6QuickControls2Basic.dll $1/Qt6QuickControls2Basic.dll
+cp $2/bin/Qt6QuickControls2BasicStyleImpl.dll $1/Qt6QuickControls2BasicStyleImpl.dll
 cp $2/bin/Qt6QuickControls2Impl.dll $1/Qt6QuickControls2Impl.dll
 cp $2/bin/Qt6QuickDialogs2.dll $1/Qt6QuickDialogs2.dll
 cp $2/bin/Qt6QuickDialogs2QuickImpl.dll $1/Qt6QuickDialogs2QuickImpl.dll

@@ -13,6 +13,7 @@ cp $2/lib/libQt6QuickVectorImage.so.6 $1/libQt6QuickVectorImage.so.6
 cp $2/lib/libQt6QmlCompiler.so.6 $1/libQt6QmlCompiler.so.6
 cp $2/lib/libQt6QmlCore.so.6 $1/libQt6QmlCore.so.6
 cp $2/lib/libQt6QuickControls2Basic.so.6 $1/libQt6QuickControls2Basic.so.6
+cp $2/lib/Qt6QuickControls2BasicStyleImpl.so.6 $1/Qt6QuickControls2BasicStyleImpl.so.6
 cp $2/lib/libQt6QuickControls2Impl.so.6 $1/libQt6QuickControls2Impl.so.6
 cp $2/lib/libQt6QuickDialogs2.so.6 $1/libQt6QuickDialogs2.so.6
 cp $2/lib/libQt6QuickDialogs2QuickImpl.so.6 $1/libQt6QuickDialogs2QuickImpl.so.6
