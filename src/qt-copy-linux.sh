@@ -25,36 +25,134 @@ cp $2/lib/libQt6QuickShapes.so.6 $1/libQt6QuickShapes.so.6
 cp $2/lib/libQt6QmlWorkerScript.so.6 $1/libQt6QmlWorkerScript.so.6
 cp $2/lib/libQt6QmlModels.so.6 $1/libQt6QmlModels.so.6
 
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_debugger.so
 cp $2/plugins/qmltooling/libqmldbg_debugger.so $1/plugins/qmltooling/libqmldbg_debugger.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_inspector.so
 cp $2/plugins/qmltooling/libqmldbg_inspector.so $1/plugins/qmltooling/libqmldbg_inspector.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_local.so
 cp $2/plugins/qmltooling/libqmldbg_local.so $1/plugins/qmltooling/libqmldbg_local.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_messages.so
 cp $2/plugins/qmltooling/libqmldbg_messages.so $1/plugins/qmltooling/libqmldbg_messages.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_native.so
 cp $2/plugins/qmltooling/libqmldbg_native.so $1/plugins/qmltooling/libqmldbg_native.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_nativedebugger.so
 cp $2/plugins/qmltooling/libqmldbg_nativedebugger.so $1/plugins/qmltooling/libqmldbg_nativedebugger.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_preview.so
 cp $2/plugins/qmltooling/libqmldbg_preview.so $1/plugins/qmltooling/libqmldbg_preview.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_profiler.so
 cp $2/plugins/qmltooling/libqmldbg_profiler.so $1/plugins/qmltooling/libqmldbg_profiler.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_quickprofiler.so
 cp $2/plugins/qmltooling/libqmldbg_quickprofiler.so $1/plugins/qmltooling/libqmldbg_quickprofiler.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_server.so
 cp $2/plugins/qmltooling/libqmldbg_server.so $1/plugins/qmltooling/libqmldbg_server.so
+
+chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_tcp.so
 cp $2/plugins/qmltooling/libqmldbg_tcp.so $1/plugins/qmltooling/libqmldbg_tcp.so
+
+
+chrpath -r '$$ORIGIN/../..' $1/qml/QtTest/libquicktestplugin.so
+cp $2/qml/QtTest/libquicktestplugin.so $1/qml/QtTest/libquicktestplugin.so
+
+chrpath -r '$$ORIGIN/../..' $1/qml/QtQuick/libqtquick2plugin.so
+cp $2/qml/QtQuick/libqtquick2plugin.so $1/qml/QtQuick/libqtquick2plugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Window/libquickwindowplugin.so
+cp $2/qml/QtQuick/Window/libquickwindowplugin.so $1/qml/QtQuick/Window/libquickwindowplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
+cp $2/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/tooling/libquicktoolingplugin.so
+cp $2/qml/QtQuick/tooling/libquicktoolingplugin.so $1/qml/QtQuick/tooling/libquicktoolingplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
+cp $2/qml/QtQuick/Templates/libqtquicktemplates2plugin.so $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
+cp $2/qml/QtQuick/Shapes/libqmlshapesplugin.so $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Particles/libparticlesplugin.so
+cp $2/qml/QtQuick/Particles/libparticlesplugin.so $1/qml/QtQuick/Particles/libparticlesplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
+cp $2/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+cp $2/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+cp $2/qml/QtQuick/Layouts/libqquicklayoutsplugin.so $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Effects/libeffectsplugin.so
+cp $2/qml/QtQuick/Effects/libeffectsplugin.so $1/qml/QtQuick/Effects/libeffectsplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
+cp $2/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
+
+chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
+cp $2/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
+cp $2/qml/QtQuick/Controls/libqtquickcontrols2plugin.so $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
+
+chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
+cp $2/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
+
+chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
+cp $2/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
+
+chrpath -r '$$ORIGIN/../../../../..' $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
+cp $2/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
+
+chrpath -r '$$ORIGIN/../..' $1/qml/QtQml/libqmlplugin.so
+cp $2/qml/QtQml/libqmlplugin.so $1/qml/QtQml/libqmlplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
+cp $2/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
+cp $2/qml/QtQml/WorkerScript/libworkerscriptplugin.so $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/Models/libmodelsplugin.so
+cp $2/qml/QtQml/Models/libmodelsplugin.so $1/qml/QtQml/Models/libmodelsplugin.so
+
+chrpath -r '$$ORIGIN/../..' $1/qml/QtNetwork/libqmlnetworkplugin.so
+cp $2/qml/QtNetwork/libqmlnetworkplugin.so $1/qml/QtNetwork/libqmlnetworkplugin.so
+
+chrpath -r '$$ORIGIN/../..' $1/qml/QtCore/libqtqmlcoreplugin.so
+cp $2/qml/QtCore/libqtqmlcoreplugin.so $1/qml/QtCore/libqtqmlcoreplugin.so
+
+chrpath -r '$$ORIGIN/../../../..' $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
+cp $2/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
+
+chrpath -r '$$ORIGIN/../../..' $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
+cp $2/qml/Assets/Downloader/libqmlassetdownloaderplugin.so $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
+
 
 cp $2/qml/builtins.qmltypes $1/qml/builtins.qmltypes
 cp $2/qml/jsroot.qmltypes $1/qml/jsroot.qmltypes
 cp $2/qml/QtTest/plugins.qmltypes $1/qml/QtTest/plugins.qmltypes
 cp $2/qml/QtTest/qmldir $1/qml/QtTest/qmldir
-cp $2/qml/QtTest/libquicktestplugin.so $1/qml/QtTest/libquicktestplugin.so
 cp $2/qml/QtTest/SignalSpy.qml $1/qml/QtTest/SignalSpy.qml
 cp $2/qml/QtTest/TestCase.qml $1/qml/QtTest/TestCase.qml
 cp $2/qml/QtTest/testlogger.js $1/qml/QtTest/testlogger.js
 cp $2/qml/QtTest/TestSchedule.qml $1/qml/QtTest/TestSchedule.qml
 cp $2/qml/QtQuick/plugins.qmltypes $1/qml/QtQuick/plugins.qmltypes
 cp $2/qml/QtQuick/qmldir $1/qml/QtQuick/qmldir
-cp $2/qml/QtQuick/libqtquick2plugin.so $1/qml/QtQuick/libqtquick2plugin.so
 cp $2/qml/QtQuick/Window/qmldir $1/qml/QtQuick/Window/qmldir
 cp $2/qml/QtQuick/Window/quickwindow.qmltypes $1/qml/QtQuick/Window/quickwindow.qmltypes
-cp $2/qml/QtQuick/Window/libquickwindowplugin.so $1/qml/QtQuick/Window/libquickwindowplugin.so
 cp $2/qml/QtQuick/VectorImage/plugins.qmltypes $1/qml/QtQuick/VectorImage/plugins.qmltypes
 cp $2/qml/QtQuick/VectorImage/qmldir $1/qml/QtQuick/VectorImage/qmldir
-cp $2/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
 cp $2/qml/QtQuick/tooling/Component.qml $1/qml/QtQuick/tooling/Component.qml
 cp $2/qml/QtQuick/tooling/Enum.qml $1/qml/QtQuick/tooling/Enum.qml
 cp $2/qml/QtQuick/tooling/Member.qml $1/qml/QtQuick/tooling/Member.qml
@@ -64,20 +162,15 @@ cp $2/qml/QtQuick/tooling/Parameter.qml $1/qml/QtQuick/tooling/Parameter.qml
 cp $2/qml/QtQuick/tooling/Property.qml $1/qml/QtQuick/tooling/Property.qml
 cp $2/qml/QtQuick/tooling/qmldir $1/qml/QtQuick/tooling/qmldir
 cp $2/qml/QtQuick/tooling/quicktooling.qmltypes $1/qml/QtQuick/tooling/quicktooling.qmltypes
-cp $2/qml/QtQuick/tooling/libquicktoolingplugin.so $1/qml/QtQuick/tooling/libquicktoolingplugin.so
 cp $2/qml/QtQuick/tooling/Signal.qml $1/qml/QtQuick/tooling/Signal.qml
 cp $2/qml/QtQuick/Templates/plugins.qmltypes $1/qml/QtQuick/Templates/plugins.qmltypes
 cp $2/qml/QtQuick/Templates/qmldir $1/qml/QtQuick/Templates/qmldir
-cp $2/qml/QtQuick/Templates/libqtquicktemplates2plugin.so $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
 cp $2/qml/QtQuick/Shapes/plugins.qmltypes $1/qml/QtQuick/Shapes/plugins.qmltypes
 cp $2/qml/QtQuick/Shapes/qmldir $1/qml/QtQuick/Shapes/qmldir
-cp $2/qml/QtQuick/Shapes/libqmlshapesplugin.so $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
-cp $2/qml/QtQuick/Particles/libparticlesplugin.so $1/qml/QtQuick/Particles/libparticlesplugin.so
 cp $2/qml/QtQuick/Particles/plugins.qmltypes $1/qml/QtQuick/Particles/plugins.qmltypes
 cp $2/qml/QtQuick/Particles/qmldir $1/qml/QtQuick/Particles/qmldir
 cp $2/qml/QtQuick/NativeStyle/plugins.qmltypes $1/qml/QtQuick/NativeStyle/plugins.qmltypes
 cp $2/qml/QtQuick/NativeStyle/qmldir $1/qml/QtQuick/NativeStyle/qmldir
-cp $2/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
 cp $2/qml/QtQuick/NativeStyle/controls/DefaultButton.qml $1/qml/QtQuick/NativeStyle/controls/DefaultButton.qml
 cp $2/qml/QtQuick/NativeStyle/controls/DefaultCheckBox.qml $1/qml/QtQuick/NativeStyle/controls/DefaultCheckBox.qml
 cp $2/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml $1/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml
@@ -98,19 +191,14 @@ cp $2/qml/QtQuick/NativeStyle/controls/DefaultTreeViewDelegate.qml $1/qml/QtQuic
 cp $2/qml/QtQuick/NativeStyle/controls/qmldir $1/qml/QtQuick/NativeStyle/controls/qmldir
 cp $2/qml/QtQuick/LocalStorage/plugins.qmltypes $1/qml/QtQuick/LocalStorage/plugins.qmltypes
 cp $2/qml/QtQuick/LocalStorage/qmldir $1/qml/QtQuick/LocalStorage/qmldir
-cp $2/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
 cp $2/qml/QtQuick/Layouts/plugins.qmltypes $1/qml/QtQuick/Layouts/plugins.qmltypes
 cp $2/qml/QtQuick/Layouts/qmldir $1/qml/QtQuick/Layouts/qmldir
-cp $2/qml/QtQuick/Layouts/libqquicklayoutsplugin.so $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
-cp $2/qml/QtQuick/Effects/libeffectsplugin.so $1/qml/QtQuick/Effects/libeffectsplugin.so
 cp $2/qml/QtQuick/Effects/plugins.qmltypes $1/qml/QtQuick/Effects/plugins.qmltypes
 cp $2/qml/QtQuick/Effects/qmldir $1/qml/QtQuick/Effects/qmldir
 cp $2/qml/QtQuick/Dialogs/plugins.qmltypes $1/qml/QtQuick/Dialogs/plugins.qmltypes
 cp $2/qml/QtQuick/Dialogs/qmldir $1/qml/QtQuick/Dialogs/qmldir
-cp $2/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
 cp $2/qml/QtQuick/Dialogs/quickimpl/plugins.qmltypes $1/qml/QtQuick/Dialogs/quickimpl/plugins.qmltypes
 cp $2/qml/QtQuick/Dialogs/quickimpl/qmldir $1/qml/QtQuick/Dialogs/quickimpl/qmldir
-cp $2/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
 cp $2/qml/QtQuick/Dialogs/quickimpl/qml/ColorDialog.qml $1/qml/QtQuick/Dialogs/quickimpl/qml/ColorDialog.qml
 cp $2/qml/QtQuick/Dialogs/quickimpl/qml/ColorInputs.qml $1/qml/QtQuick/Dialogs/quickimpl/qml/ColorInputs.qml
 cp $2/qml/QtQuick/Dialogs/quickimpl/qml/FileDialog.qml $1/qml/QtQuick/Dialogs/quickimpl/qml/FileDialog.qml
@@ -128,10 +216,8 @@ cp $2/qml/QtQuick/Dialogs/quickimpl/qml/PickerHandle.qml $1/qml/QtQuick/Dialogs/
 cp $2/qml/QtQuick/Dialogs/quickimpl/qml/SaturationLightnessPicker.qml $1/qml/QtQuick/Dialogs/quickimpl/qml/SaturationLightnessPicker.qml
 cp $2/qml/QtQuick/Controls/plugins.qmltypes $1/qml/QtQuick/Controls/plugins.qmltypes
 cp $2/qml/QtQuick/Controls/qmldir $1/qml/QtQuick/Controls/qmldir
-cp $2/qml/QtQuick/Controls/libqtquickcontrols2plugin.so $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
 cp $2/qml/QtQuick/Controls/impl/plugins.qmltypes $1/qml/QtQuick/Controls/impl/plugins.qmltypes
 cp $2/qml/QtQuick/Controls/impl/qmldir $1/qml/QtQuick/Controls/impl/qmldir
-cp $2/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
 cp $2/qml/QtQuick/Controls/Basic/AbstractButton.qml $1/qml/QtQuick/Controls/Basic/AbstractButton.qml
 cp $2/qml/QtQuick/Controls/Basic/Action.qml $1/qml/QtQuick/Controls/Basic/Action.qml
 cp $2/qml/QtQuick/Controls/Basic/ActionGroup.qml $1/qml/QtQuick/Controls/Basic/ActionGroup.qml
@@ -170,7 +256,6 @@ cp $2/qml/QtQuick/Controls/Basic/plugins.qmltypes $1/qml/QtQuick/Controls/Basic/
 cp $2/qml/QtQuick/Controls/Basic/Popup.qml $1/qml/QtQuick/Controls/Basic/Popup.qml
 cp $2/qml/QtQuick/Controls/Basic/ProgressBar.qml $1/qml/QtQuick/Controls/Basic/ProgressBar.qml
 cp $2/qml/QtQuick/Controls/Basic/qmldir $1/qml/QtQuick/Controls/Basic/qmldir
-cp $2/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
 cp $2/qml/QtQuick/Controls/Basic/RadioButton.qml $1/qml/QtQuick/Controls/Basic/RadioButton.qml
 cp $2/qml/QtQuick/Controls/Basic/RadioDelegate.qml $1/qml/QtQuick/Controls/Basic/RadioDelegate.qml
 cp $2/qml/QtQuick/Controls/Basic/RangeSlider.qml $1/qml/QtQuick/Controls/Basic/RangeSlider.qml
@@ -201,32 +286,23 @@ cp $2/qml/QtQuick/Controls/Basic/VerticalHeaderView.qml $1/qml/QtQuick/Controls/
 cp $2/qml/QtQuick/Controls/Basic/WeekNumberColumn.qml $1/qml/QtQuick/Controls/Basic/WeekNumberColumn.qml
 cp $2/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes $1/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes
 cp $2/qml/QtQuick/Controls/Basic/impl/qmldir $1/qml/QtQuick/Controls/Basic/impl/qmldir
-cp $2/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
 cp $2/qml/QtQml/plugins.qmltypes $1/qml/QtQml/plugins.qmltypes
 cp $2/qml/QtQml/qmldir $1/qml/QtQml/qmldir
-cp $2/qml/QtQml/libqmlplugin.so $1/qml/QtQml/libqmlplugin.so
 cp $2/qml/QtQml/XmlListModel/plugins.qmltypes $1/qml/QtQml/XmlListModel/plugins.qmltypes
 cp $2/qml/QtQml/XmlListModel/qmldir $1/qml/QtQml/XmlListModel/qmldir
-cp $2/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
 cp $2/qml/QtQml/WorkerScript/plugins.qmltypes $1/qml/QtQml/WorkerScript/plugins.qmltypes
 cp $2/qml/QtQml/WorkerScript/qmldir $1/qml/QtQml/WorkerScript/qmldir
-cp $2/qml/QtQml/WorkerScript/libworkerscriptplugin.so $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
-cp $2/qml/QtQml/Models/libmodelsplugin.so $1/qml/QtQml/Models/libmodelsplugin.so
 cp $2/qml/QtQml/Models/plugins.qmltypes $1/qml/QtQml/Models/plugins.qmltypes
 cp $2/qml/QtQml/Models/qmldir $1/qml/QtQml/Models/qmldir
 cp $2/qml/QtNetwork/plugins.qmltypes $1/qml/QtNetwork/plugins.qmltypes
 cp $2/qml/QtNetwork/qmldir $1/qml/QtNetwork/qmldir
-cp $2/qml/QtNetwork/libqmlnetworkplugin.so $1/qml/QtNetwork/libqmlnetworkplugin.so
 cp $2/qml/QtCore/plugins.qmltypes $1/qml/QtCore/plugins.qmltypes
 cp $2/qml/QtCore/qmldir $1/qml/QtCore/qmldir
-cp $2/qml/QtCore/libqtqmlcoreplugin.so $1/qml/QtCore/libqtqmlcoreplugin.so
 cp $2/qml/Qt/test/controls/qmldir $1/qml/Qt/test/controls/qmldir
 cp $2/qml/Qt/test/controls/QuickControlsTestUtilsPrivate.qmltypes $1/qml/Qt/test/controls/QuickControlsTestUtilsPrivate.qmltypes
-cp $2/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
 cp $2/qml/QmlTime/qmldir $1/qml/QmlTime/qmldir
 cp $2/qml/QmlTime/qmltime.qmltypes $1/qml/QmlTime/qmltime.qmltypes
 cp $2/qml/QML/plugins.qmltypes $1/qml/QML/plugins.qmltypes
 cp $2/qml/QML/qmldir $1/qml/QML/qmldir
 cp $2/qml/Assets/Downloader/plugins.qmltypes $1/qml/Assets/Downloader/plugins.qmltypes
-cp $2/qml/Assets/Downloader/libqmlassetdownloaderplugin.so $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
 cp $2/qml/Assets/Downloader/qmldir $1/qml/Assets/Downloader/qmldir
