@@ -8,12 +8,11 @@ cp $2/lib/libQt6Quick.so.6 $1/libQt6Quick.so.6
 cp $2/lib/libQt6QuickControls2.so.6 $1/libQt6QuickControls2.so.6
 cp $2/lib/libQt6QuickTemplates2.so.6 $1/libQt6QuickTemplates2.so.6
 cp $2/lib/libQt6QuickWidgets.so.6 $1/libQt6QuickWidgets.so.6
-
 cp $2/lib/libQt6QuickVectorImage.so.6 $1/libQt6QuickVectorImage.so.6
 cp $2/lib/libQt6QmlCompiler.so.6 $1/libQt6QmlCompiler.so.6
 cp $2/lib/libQt6QmlCore.so.6 $1/libQt6QmlCore.so.6
 cp $2/lib/libQt6QuickControls2Basic.so.6 $1/libQt6QuickControls2Basic.so.6
-cp $2/lib/Qt6QuickControls2BasicStyleImpl.so.6 $1/Qt6QuickControls2BasicStyleImpl.so.6
+cp $2/lib/libQt6QuickControls2BasicStyleImpl.so.6 $1/libQt6QuickControls2BasicStyleImpl.so.6
 cp $2/lib/libQt6QuickControls2Impl.so.6 $1/libQt6QuickControls2Impl.so.6
 cp $2/lib/libQt6QuickDialogs2.so.6 $1/libQt6QuickDialogs2.so.6
 cp $2/lib/libQt6QuickDialogs2QuickImpl.so.6 $1/libQt6QuickDialogs2QuickImpl.so.6
@@ -26,116 +25,116 @@ cp $2/lib/libQt6QmlWorkerScript.so.6 $1/libQt6QmlWorkerScript.so.6
 cp $2/lib/libQt6QmlModels.so.6 $1/libQt6QmlModels.so.6
 
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_debugger.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_debugger.so
 cp $2/plugins/qmltooling/libqmldbg_debugger.so $1/plugins/qmltooling/libqmldbg_debugger.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_inspector.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_inspector.so
 cp $2/plugins/qmltooling/libqmldbg_inspector.so $1/plugins/qmltooling/libqmldbg_inspector.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_local.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_local.so
 cp $2/plugins/qmltooling/libqmldbg_local.so $1/plugins/qmltooling/libqmldbg_local.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_messages.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_messages.so
 cp $2/plugins/qmltooling/libqmldbg_messages.so $1/plugins/qmltooling/libqmldbg_messages.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_native.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_native.so
 cp $2/plugins/qmltooling/libqmldbg_native.so $1/plugins/qmltooling/libqmldbg_native.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_nativedebugger.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_nativedebugger.so
 cp $2/plugins/qmltooling/libqmldbg_nativedebugger.so $1/plugins/qmltooling/libqmldbg_nativedebugger.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_preview.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_preview.so
 cp $2/plugins/qmltooling/libqmldbg_preview.so $1/plugins/qmltooling/libqmldbg_preview.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_profiler.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_profiler.so
 cp $2/plugins/qmltooling/libqmldbg_profiler.so $1/plugins/qmltooling/libqmldbg_profiler.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_quickprofiler.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_quickprofiler.so
 cp $2/plugins/qmltooling/libqmldbg_quickprofiler.so $1/plugins/qmltooling/libqmldbg_quickprofiler.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_server.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_server.so
 cp $2/plugins/qmltooling/libqmldbg_server.so $1/plugins/qmltooling/libqmldbg_server.so
 
-chrpath -r '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_tcp.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/plugins/qmltooling/libqmldbg_tcp.so
 cp $2/plugins/qmltooling/libqmldbg_tcp.so $1/plugins/qmltooling/libqmldbg_tcp.so
 
 
-chrpath -r '$$ORIGIN/../..' $1/qml/QtTest/libquicktestplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/qml/QtTest/libquicktestplugin.so
 cp $2/qml/QtTest/libquicktestplugin.so $1/qml/QtTest/libquicktestplugin.so
 
-chrpath -r '$$ORIGIN/../..' $1/qml/QtQuick/libqtquick2plugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/qml/QtQuick/libqtquick2plugin.so
 cp $2/qml/QtQuick/libqtquick2plugin.so $1/qml/QtQuick/libqtquick2plugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Window/libquickwindowplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Window/libquickwindowplugin.so
 cp $2/qml/QtQuick/Window/libquickwindowplugin.so $1/qml/QtQuick/Window/libquickwindowplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
 cp $2/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so $1/qml/QtQuick/VectorImage/libqquickvectorimageplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/tooling/libquicktoolingplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/tooling/libquicktoolingplugin.so
 cp $2/qml/QtQuick/tooling/libquicktoolingplugin.so $1/qml/QtQuick/tooling/libquicktoolingplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
 cp $2/qml/QtQuick/Templates/libqtquicktemplates2plugin.so $1/qml/QtQuick/Templates/libqtquicktemplates2plugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
 cp $2/qml/QtQuick/Shapes/libqmlshapesplugin.so $1/qml/QtQuick/Shapes/libqmlshapesplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Particles/libparticlesplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Particles/libparticlesplugin.so
 cp $2/qml/QtQuick/Particles/libparticlesplugin.so $1/qml/QtQuick/Particles/libparticlesplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
 cp $2/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so $1/qml/QtQuick/NativeStyle/libqtquickcontrols2nativestyleplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
 cp $2/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so $1/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
 cp $2/qml/QtQuick/Layouts/libqquicklayoutsplugin.so $1/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Effects/libeffectsplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Effects/libeffectsplugin.so
 cp $2/qml/QtQuick/Effects/libeffectsplugin.so $1/qml/QtQuick/Effects/libeffectsplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
 cp $2/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so $1/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so
 
-chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../../..' $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
 cp $2/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so $1/qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
 cp $2/qml/QtQuick/Controls/libqtquickcontrols2plugin.so $1/qml/QtQuick/Controls/libqtquickcontrols2plugin.so
 
-chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
 cp $2/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so $1/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so
 
-chrpath -r '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../../..' $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
 cp $2/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so $1/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
 
-chrpath -r '$$ORIGIN/../../../../..' $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../../../..' $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
 cp $2/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so $1/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
 
-chrpath -r '$$ORIGIN/../..' $1/qml/QtQml/libqmlplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/qml/QtQml/libqmlplugin.so
 cp $2/qml/QtQml/libqmlplugin.so $1/qml/QtQml/libqmlplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
 cp $2/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so $1/qml/QtQml/XmlListModel/libqmlxmllistmodelplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
 cp $2/qml/QtQml/WorkerScript/libworkerscriptplugin.so $1/qml/QtQml/WorkerScript/libworkerscriptplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/QtQml/Models/libmodelsplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/QtQml/Models/libmodelsplugin.so
 cp $2/qml/QtQml/Models/libmodelsplugin.so $1/qml/QtQml/Models/libmodelsplugin.so
 
-chrpath -r '$$ORIGIN/../..' $1/qml/QtNetwork/libqmlnetworkplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/qml/QtNetwork/libqmlnetworkplugin.so
 cp $2/qml/QtNetwork/libqmlnetworkplugin.so $1/qml/QtNetwork/libqmlnetworkplugin.so
 
-chrpath -r '$$ORIGIN/../..' $1/qml/QtCore/libqtqmlcoreplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../..' $1/qml/QtCore/libqtqmlcoreplugin.so
 cp $2/qml/QtCore/libqtqmlcoreplugin.so $1/qml/QtCore/libqtqmlcoreplugin.so
 
-chrpath -r '$$ORIGIN/../../../..' $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../../..' $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
 cp $2/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so $1/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
 
-chrpath -r '$$ORIGIN/../../..' $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
+patchelf --force-rpath --set-rpath '$$ORIGIN/../../..' $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
 cp $2/qml/Assets/Downloader/libqmlassetdownloaderplugin.so $1/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
 
 
